@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CoffeeHub Online</title>
+  <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+
+<nav>
+  <h1 class="logo-container">
+    <span class="logo-text">Coffee</span><span class="logo-box">hub</span>
+  </h1>
+  <div class="nav-items">
+    <div>
+      <input type="text" placeholder="Search coffee...">
+      <button class="search-btn">🔍</button>
+    </div>
+    <button class="btn login">Login</button>
+    <button class="btn signup">Sign Up</button>
+    <button class="btn" id="cart-btn">
+      Cart 🛒 <span id="cart-badge">0</span>
+    </button>
+  </div>
+</nav>
+
+<main>
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Start Your Day with Fresh Coffee</h2>
+      <p>Explore premium beans, hot brews, and cozy vibes.</p>
+      <button class="btn btn-accent add-to-cart"
+        data-name="Special Brew"
+        data-price="150"
+        data-img="product-pics/background.jpg">
+        Add to Cart</button>
+    </div>
+  </section>
+
+  <section class="restaurants">
+    <h2>Top 10 Best Sellers</h2>
+    <div class="cards">
+
+      <div class="card">
+        <img src="product-pics/Espresso Temptation.jpg" alt="Espresso Temptation">
+        <div class="card-content">
+          <h3>Espresso Temptation</h3>
+          <p>A seductive, dark-roasted intensity that pulls you in.</p>
+          <div class="stars">★★★★★</div>
+          <button class="btn btn-primary add-to-cart"
+            data-name="Espresso Temptation"
+            data-price="120"
+            data-img="product-pics/Espresso Temptation.jpg">
+            Add to Cart
+          </button>
+        </div>
+      </div>
+
+    <div class="card">
+      <img src="product-pics/The Midnight Bold.jpg" alt="The Midnight Bold">
+      <div class="card-content">
+        <h3>The Midnight Bold</h3>
+        <p>Pure, dark, and deep. A smooth awakening for the soul.</p>
+        <div class="stars">★★★★★</div>
+        <button class=" btn btn-primary add-to-cart" 
+            data-name="The Midnight Bold" 
+            data-price="130"
+            data-img="product-pics/The Midnight Bold.jpg">
+            Add to Cart
+        </button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="product-pics/The Golden Ritual.webp" alt="The Golden Ritual">
+      <div class="card-content">
+        <h3>The Golden Ritual</h3>
+        <p>A Parisian-style escape in every bite and sip.</p>
+        <div class="stars">★★★★★</div>
+        <button class=" btn btn-primary add-to-cart" 
+            data-name="The Golden Ritual"
+            data-price="110"
+            data-img="product-pics/The Golden Ritual.webp">
+            Add to Cart
+        </button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="product-pics/flat white.webp" alt="flat white">
+      <div class="card-content">
+        <h3>The Connoisseur’s Choice</h3>
+        <p>Silky, strong, and sophisticated. All the velvet, none of the fluff.</p>
+        <div class="stars">★★★★★</div>
+        <button class=" btn btn-primary add-to-cart" 
+            data-name="The Connoisseur’s Choice"
+            data-price="140"
+            data-img="product-pics/flat white.webp">
+            Add to Cart
+        </button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="images/brewedawakening.png" alt="Brewed Awakening">
+      <div class="card-content">
+        <h3>Brewed Awakening</h3>
+        <p>Top-quality espresso with cozy seating.</p>
+        <div class="stars">★★★★★</div>
+        <button class=" btn btn-primary add-to-cart" 
+            data-name="Brewed Awakening Mocha"
+            data-price="135"
+            data-img="images/brewedawakening.png">
+            Add to Cart
+        </button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="images/morningbrew.png" alt="Morning Brew">
+      <div class="card-content">
+        <h3>Morning Brew</h3>
+        <p>Wake up with our bold and rich coffee blends.</p>
+        <div class="stars">★★★★★</div>
+        <button class=" btn btn-primary add-to-cart"
+            data-name="Morning Brew"
+            data-price="125"
+            data-img="images/morningbrew.png">
+            Add to Cart
+        </button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="images/roastandtoast.png" alt="Roast & Toast">
+      <div class="card-content">
+        <h3>Roast & Toast</h3>
+        <p>Specialty roasts and artisan pastries.</p>
+        <div class="stars">★★★★★</div>
+        <button class=" btn btn-primary add-to-cart"
+            data-name="Roast & Toast"
+            data-price="140"
+            data-img="images/roastandtoast.png">
+            Add to Cart
+        </button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="images/espressoexpress.png" alt="Espresso Express">
+      <div class="card-content">
+        <h3>Espresso Express</h3>
+        <p>Quick coffee fixes for busy mornings.</p>
+        <div class="stars">★★★★★</div>
+        <button class=" btn btn-primary add-to-cart"
+            data-name="Espresso Express"
+            data-price="115"
+            data-img="images/espressoexpress.png">
+            Add to Cart
+        </button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="images/lattelove.png" alt="Latte Love">
+      <div class="card-content">
+        <h3>Latte Love</h3>
+        <p>Creative latte art and smooth blends.</p>
+        <div class="stars">★★★★★</div>
+        <button class=" btn btn-primary add-to-cart"
+            data-name="Latte Love"
+            data-price="130"
+            data-img="images/lattelove.png">
+            Add to Cart
+        </button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="images/brewmasters.png" alt="Brew Masters">
+      <div class="card-content">
+        <h3>Brew Masters</h3>
+        <p>Expertly brewed coffee with cozy seating.</p>
+        <div class="stars">★★★★★</div>
+        <button class=" btn btn-primary add-to-cart"
+            data-name="Brew Masters"
+            data-price="145"
+            data-img="images/brewmasters.png">
+            Add to Cart
+        </button>
+      </div>
+    </div>
+    </div>
+  </section>
+</main>
+
+<!-- Cart Panel -->
+<div id="cart-panel">
+  <span class="close-cart">✖</span>
+  <h2>Your Cart</h2>
+  <div id="cart-items"></div>
+  <div class="cart-total">Total: ₱0</div>
+  <button id="checkout-btn">Checkout</button>
+</div>
+
+<footer>
+  &copy; 2026 CoffeeHub | Made for School Project
+</footer>
+
+<script src="Coffehub.js"></script>
+</body>
+</html>

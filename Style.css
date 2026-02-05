@@ -1,0 +1,453 @@
+/* ========================================
+   GLOBAL STYLES & RESET
+   ======================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background-color: #fdf6f0;
+  color: #333;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+/* ========================================
+   NAVIGATION BAR
+   ======================================== */
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #3b2313;
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* --- NEW LOGO STYLES START --- */
+.logo-container {
+  display: flex;
+  align-items: center;
+  /* We use Arial/Helvetica to match the meme style exactly */
+  font-family: Arial, Helvetica, sans-serif; 
+  font-weight: bold;
+  font-size: 2.5rem; /* Adjusted size */
+  letter-spacing: -2px; /* Tightens the letters */
+  cursor: pointer;
+  margin: 0;
+}
+
+.logo-text {
+  color: #ffffff;
+}
+
+.logo-box {
+  background-color: #ff9900; /* The signature orange */
+  color: #000000;
+  padding: 2px 10px; /* Spacing inside the box */
+  border-radius: 6px; /* Rounded corners */
+  margin-left: 6px; /* Space between Coffee and hub */
+  display: inline-block;
+  line-height: 1; 
+  font-size: 2.5rem; /* Ensures the box text matches the size */
+}
+
+nav h1 {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+nav .nav-items {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+nav input[type="text"] {
+  padding: 0.4rem 0.6rem;
+  border-radius: 8px 0 0 8px;
+  border: none;
+  outline: none;
+}
+
+nav button.search-btn {
+  padding: 0.4rem 0.6rem;
+  border: none;
+  border-radius: 0 8px 8px 0;
+  background-color: #fff;
+  color: #6b4226;
+  cursor: pointer;
+}
+
+nav .btn {
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+nav .btn.login {
+  background-color: #fff;
+  color: #6b4226;
+}
+
+nav .btn.signup {
+  background-color: #ff9900;
+  color: #fff;
+}
+
+#cart-btn {
+  position: relative;
+  background-color: #ff9900;
+  color: #fff;
+}
+
+#cart-badge {
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  background: #ff3333;
+  color: #fff;
+  font-size: 0.8rem;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* ========================================
+   HERO SECTION
+   ======================================== */
+
+.hero {
+  position: relative;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 3rem;
+  color: #fff;
+  overflow: hidden;
+
+  background-image: url("product-pics/background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 600px;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 0;
+}
+
+.hero h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero button {
+  background-color: #ff9900;
+  color: #fff;
+  padding: 0.7rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.hero button:hover {
+  background-color: #e68a00;
+  transform: scale(1.05);
+}
+
+
+/* ========================================
+   PRODUCTS SECTION (CARDS)
+   ======================================== */
+
+.restaurants {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.restaurants h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #6b4226;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 1rem;
+}
+
+.card-content h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #6b4226;
+}
+
+.card-content p {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 0.7rem;
+}
+
+.card-content .stars {
+  color: #ff9900;
+  margin-bottom: 0.7rem;
+}
+
+.card-content button {
+  background-color: #6b4226;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.card-content button:hover {
+  background-color: #56341f;
+  transform: scale(1.05);
+}
+
+
+/* ========================================
+   SHOPPING CART PANEL
+   ======================================== */
+
+#cart-panel {
+  position: fixed;
+  top: 0;
+  right: -400px;
+  width: 380px;
+  height: 100%;
+  background: #fff;
+  box-shadow: -4px 0 20px rgba(0, 0, 0, 0.3);
+  transition: right 0.3s;
+  z-index: 200;
+  padding: 1rem;
+  overflow-y: auto;
+  border-radius: 0 10px 10px 0;
+}
+
+#cart-panel.active {
+  right: 0;
+}
+
+#cart-panel h2 {
+  margin-bottom: 1rem;
+  color: #6b4226;
+}
+
+.close-cart {
+  cursor: pointer;
+  font-weight: bold;
+  color: #ff9900;
+  float: right;
+  font-size: 1.2rem;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  border-bottom: 1px solid #ddd;
+  gap: 10px;
+}
+
+.cart-item img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.cart-item-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.cart-item-details .name-price {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  color: #6b4226;
+  margin-bottom: 5px;
+}
+
+.qty-controls {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.qty-controls button {
+  background-color: #ff9900;
+  color: #fff;
+  border: none;
+  padding: 3px 8px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.qty-controls button:hover {
+  background-color: #e68a00;
+}
+
+.qty-controls .remove {
+  background-color: #ff3333;
+  margin-left: 10px;
+}
+
+.qty-controls .remove:hover {
+  background-color: #cc0000;
+}
+
+.qty-controls .qty {
+  padding: 3px 8px;
+  min-width: 25px;
+  text-align: center;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  display: inline-block;
+}
+
+.cart-total {
+  font-weight: bold;
+  text-align: right;
+  margin-top: 1rem;
+  color: #6b4226;
+}
+
+#checkout-btn {
+  margin-top: 10px;
+  background-color: #6b4226;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+#checkout-btn:hover {
+  background-color: #56341f;
+}
+
+
+/* ========================================
+   ANIMATIONS
+   ======================================== */
+
+.floating {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  z-index: 300;
+  pointer-events: none;
+  transition: transform 0.7s ease-in, opacity 0.7s ease;
+}
+
+
+/* ========================================
+   FOOTER
+   ======================================== */
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  background-color: #6b4226;
+  color: #fff;
+}
+
+
+/* ========================================
+   RESPONSIVE DESIGN (Mobile)
+   ======================================== */
+
+@media (max-width: 768px) {
+  .hero h2 {
+    font-size: 2.2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  #cart-panel {
+    width: 90%;
+  }
+}
